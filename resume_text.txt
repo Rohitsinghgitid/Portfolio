@@ -1,0 +1,48 @@
+Rohit Singh Baghel 
+rohitbaghel0802@gmail.com +918219455858 
+ 
+WEBSITES AND SOCIAL LINKS 
+   LinkedIn: linkedin.com/in/rohit-singh-baghel    Codolio: codolio.com/profile/rohitsinghbaghel0802 
+   Github: github.com/Rohitsinghgitid 
+ 
+SUMMARY 
+B.Tech student proficient in C++, Python and Java with hands-on web development using HTML, CSS, JavaScript and 
+Express.js to build secure, responsive applications and RESTful APIs. Experienced with Git-based workflows, MySQL, and 
+secure coding practices; conducted vulnerability assessments and ethical hacking using Kali Linux. Seeking software 
+development or cybersecurity internships to apply practical security experience. 
+EXPERIENCE 
+GEN AI STUDY JAM INTERN | Jan 2023 — march 2023 
+Virtual Internship 
+Completed Google Cloud's Gen AI Study Jam internship focused on developing and deploying generative AI solutions. Built a 
+proof-of-concept using Vertex AI on GKE; processed datasets with BigQuery and Cloud Storage; automated inference with 
+Cloud Functions; presented technical demos via Google Colab and Slides. 
+EDUCATION 
+  Lakshmi Narayan College Of Technology and Science (LNCTS) - Bhopal | B.Tech 2023 – 2027 
+  Computer Science (Cyber Security) | CGPA: 7.61 (Latest) 
+  Army Public School - Wellington | Class 10th 2020 – 2021 
+  Percentage: 84.4% 
+  Kendriya Vidyalaya - Wellington | Class 12th 2022 – 2023 
+  Percentage: 79.2% 
+ 
+PROJECTS 
+1. Vidyaleen: A lightweight PWA study web app for students in rural areas with limited internet — works offline and loads 
+efficiently on low-bandwidth networks. 
+2. ResumeBuilder: An app to create ATS-friendly resumes efficiently, helping users structure experience and skills for modern 
+hiring pipelines. 
+3. Snipify: An app to save, edit and tag code snippets in organized folders — making it easy to access and share them 
+anywhere, anytime. 
+4. Portfolio- Designed an Interactive Portfolio Website. 
+ 
+SKILLS 
+• GitHub • Kali Linux 
+• Metasploit • Penetration Testing 
+• Problem-Solving • Cloud Computing 
+ 
+ACHIEVEMENTS 
+Participated research paper 'Secure and Energy efficient Smart Home Automation using ESP32, MQTT, and AES' — ICAIEST 
+2026. Led a team of 5 in the Smart India Hackathon (SIH), advancing past the internal college selection round. Active participant 
+in hackathons (Codeverse) and Hacktoberfest 2024; contributed UI/UX and documentation improvements to open-source 
+projects. 
+CERTIFICATIONS AND LICENSES 
+Gen AI Study Jam (Google) — via LinkedIn |NPTEL: Ethical Hacking | Oracle Ai foundation associate | Introduction to IoT & 
+Digital Transformation (NASSCOM) | Infosys Springboard: Certified Frontend Web Developer 
