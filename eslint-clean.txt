@@ -1,0 +1,7 @@
+C:\Users\HP\Documents\rohit\portfolio\src\components\AnimatedHeading.tsx
+  34: Unexpected any. Specify a different type.
+C:\Users\HP\Documents\rohit\portfolio\src\components\Overlay.tsx
+  3: 'useRef' is defined but never used.
+  131: Unexpected any. Specify a different type.
+C:\Users\HP\Documents\rohit\portfolio\src\components\ScrollyCanvas.tsx
+  4: 'useScroll' is defined but never used.

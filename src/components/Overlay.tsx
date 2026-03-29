@@ -1,7 +1,6 @@
 "use client";
 
-import { useRef } from "react";
-import { useScroll, useTransform, motion } from "framer-motion";
+import { useScroll, useTransform, motion, MotionValue } from "framer-motion";
 
 
 const sections = [
@@ -128,7 +127,7 @@ function OverlaySection({
 }
 
 interface OverlayProps {
-  scrollYProgress: any; // Using any for the MotionValue type from framer-motion
+  scrollYProgress: MotionValue<number>;
 }
 
 export default function Overlay({ scrollYProgress }: OverlayProps) {

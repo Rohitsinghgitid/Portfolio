@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useCallback, useState } from "react";
-import { useScroll, useTransform, useMotionValueEvent, motion, MotionValue } from "framer-motion";
+import { useTransform, useMotionValueEvent, motion, MotionValue } from "framer-motion";
 import Overlay from "./Overlay";
 
 

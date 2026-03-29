@@ -31,7 +31,7 @@ interface AnimatedHeadingProps {
 }
 
 export default function AnimatedHeading({ children, className = "", as = "h2" }: AnimatedHeadingProps) {
-  const Component = motion[as] as any;
+  const Component = motion[as as keyof typeof motion] as React.ElementType;
 
   return (
     <Component
