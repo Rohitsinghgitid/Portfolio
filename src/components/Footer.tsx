@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const socials = [
   { label: "GitHub", href: "https://github.com/Rohitsinghgitid" },
-  { label: "LinkedIn", href: "https://linkedin.com/in/rohit-singh-baghel" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/rohit-singh-baghel-bb6410321" },
   { label: "Codolio", href: "https://codolio.com/profile/rohitsinghbaghel0802" },
 ];
 
