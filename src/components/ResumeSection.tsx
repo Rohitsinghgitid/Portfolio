@@ -76,8 +76,8 @@ export default function ResumeSection() {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               {experience.map((exp, i) => (
-                <div key={i} className="saas-card p-10 group relative overflow-hidden border-l-4 border-l-primary">
-                  <div className="absolute top-0 right-0 p-8 text-xs font-mono text-[#444444] tracking-widest">{exp.period}</div>
+                <div key={i} className="saas-card p-6 md:p-10 group relative overflow-hidden border-l-4 border-l-primary">
+                  <div className="relative md:absolute md:top-0 md:right-0 md:p-8 mb-4 md:mb-0 text-xs font-mono text-[#444444] tracking-widest">{exp.period}</div>
                   
                   <div className="flex flex-col gap-2 mb-6">
                     <h4 className="text-2xl font-black text-white group-hover:text-primary transition-colors">{exp.title}</h4>
@@ -110,7 +110,7 @@ export default function ResumeSection() {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               {education.map((edu, i) => (
-                <div key={i} className="saas-card p-10 group border-l-4 border-l-primary/60 hover:border-l-primary transition-all">
+                <div key={i} className="saas-card p-6 md:p-10 group border-l-4 border-l-primary/60 hover:border-l-primary transition-all">
                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
                     <h4 className="text-2xl font-black text-white group-hover:text-primary transition-colors leading-tight">{edu.school}</h4>
                     <span className="text-xs font-mono text-[#555555] uppercase tracking-widest bg-white/5 px-4 py-2 rounded-lg">{edu.period}</span>
@@ -164,7 +164,7 @@ export default function ResumeSection() {
                   </span>
                   
                   {cert.file && (
-                    <div className="w-full grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows,opacity] duration-300 ease-out opacity-0 group-hover:opacity-100">
+                    <div className="w-full grid grid-rows-[1fr] md:grid-rows-[0fr] md:group-hover:grid-rows-[1fr] transition-[grid-template-rows,opacity] duration-300 ease-out opacity-100 md:opacity-0 md:group-hover:opacity-100">
                       <div className="overflow-hidden">
                         <div className="flex items-center gap-2 mt-4 pb-1">
                            <a

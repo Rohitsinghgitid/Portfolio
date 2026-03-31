@@ -18,7 +18,7 @@ const sections = [
         >
           Computer Science (Cyber Security)
         </motion.div>
-        <h1 className="text-6xl md:text-8xl font-black tracking-tight leading-none mb-4">
+        <h1 className="text-5xl sm:text-6xl md:text-8xl font-black tracking-tight leading-none mb-4">
           <span
             style={{
               background: "linear-gradient(135deg, #f0f0f0 0%, #a79cf5 60%, #7c6af7 100%)",
@@ -30,7 +30,7 @@ const sections = [
             Rohit Singh.
           </span>
         </h1>
-        <p className="text-[#888888] text-lg md:text-xl font-light tracking-wide max-w-sm mx-auto">
+        <p className="text-[#888888] text-base md:text-xl font-light tracking-wide max-w-sm mx-auto">
           B.Tech student at LNCTS Bhopal specializing in secure, responsive applications and AI.
         </p>
       </div>
@@ -46,7 +46,7 @@ const sections = [
         <div className="mb-3 text-xs tracking-[0.5em] text-[#7c6af7] uppercase font-medium">
           Gen AI Experience
         </div>
-        <h2 className="text-5xl md:text-7xl font-black leading-tight tracking-tight mb-5">
+        <h2 className="text-4xl sm:text-5xl md:text-7xl font-black leading-tight tracking-tight mb-5">
           <span className="text-[#f0f0f0]">Google Cloud</span>
           <br />
           <span
@@ -67,7 +67,7 @@ const sections = [
         </p>
       </div>
     ),
-    position: "items-center justify-start pl-10 md:pl-24",
+    position: "items-center justify-start pl-6 sm:pl-10 md:pl-24",
   },
   {
     id: "security",
@@ -78,7 +78,7 @@ const sections = [
         <div className="mb-3 text-xs tracking-[0.5em] text-[#7c6af7] uppercase font-medium">
           Security Research
         </div>
-        <h2 className="text-5xl md:text-7xl font-black leading-tight tracking-tight mb-5 text-balance">
+        <h2 className="text-4xl sm:text-5xl md:text-7xl font-black leading-tight tracking-tight mb-5 text-balance">
           <span className="text-[#f0f0f0]">Secure and</span>
           <br />
           <span
@@ -99,7 +99,7 @@ const sections = [
         </p>
       </div>
     ),
-    position: "items-center justify-end pr-10 md:pr-24",
+    position: "items-center justify-end pr-6 sm:pr-10 md:pr-24",
   },
 ];
 

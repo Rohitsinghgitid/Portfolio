@@ -53,7 +53,7 @@ export default function About() {
              whileInView={{ opacity: 1, y: 0 }}
              viewport={{ once: true }}
              transition={{ duration: 0.8, delay: 0.1 }}
-             className="lg:col-span-2 saas-card p-8 md:p-12"
+             className="lg:col-span-2 saas-card p-6 md:p-12"
           >
             <div className="flex items-center gap-3 mb-8">
               <div className="w-1.5 h-6 bg-primary rounded-full shadow-lg" style={{ boxShadow: "0 0 15px rgba(var(--primary) / 0.5)" }} />
@@ -87,7 +87,7 @@ export default function About() {
              transition={{ duration: 0.8, delay: 0.2 }}
              className="flex flex-col gap-8"
           >
-             <div className="saas-card p-8 flex-1">
+             <div className="saas-card p-6 md:p-8 flex-1">
                 <div className="flex items-center gap-3 mb-8">
                   <div className="w-1.5 h-6 bg-primary rounded-full shadow-lg" style={{ boxShadow: "0 0 15px rgba(var(--primary) / 0.5)" }} />
                   <h3 className="text-lg font-bold text-white">Achievements</h3>
@@ -104,13 +104,13 @@ export default function About() {
 
              <div className="gradient-border group relative h-[60px] cursor-pointer overflow-hidden rounded-2xl">
                 {/* Default State */}
-                <div className="absolute inset-0 bg-white text-[#050505] flex items-center justify-center gap-3 text-sm font-bold transition-transform duration-500 ease-in-out group-hover:-translate-y-full">
+                <div className="absolute inset-0 bg-white text-[#050505] flex items-center justify-center gap-3 text-sm font-bold transition-transform duration-500 ease-in-out md:translate-y-0 -translate-y-full md:group-hover:-translate-y-full">
                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
                    Resume
                 </div>
                 
                 {/* Hover State - Dual Options */}
-                <div className="absolute inset-0 flex translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out">
+                <div className="absolute inset-0 flex md:translate-y-full translate-y-0 md:group-hover:translate-y-0 transition-transform duration-500 ease-in-out">
                    <a 
                       href="/resume.pdf" 
                       target="_blank"

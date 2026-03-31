@@ -25,14 +25,14 @@ export default function Footer() {
            className="text-center"
         >
           <span className="text-xs tracking-[0.8em] text-primary uppercase font-bold mb-8 block">Ready for Internships</span>
-          <h2 className="text-6xl md:text-9xl font-black text-white tracking-tighter mb-16 leading-none select-none">
+          <h2 className="text-5xl sm:text-6xl md:text-9xl font-black text-white tracking-tighter mb-16 leading-none select-none">
             Let&apos;s <span className="text-gradient">Talk.</span>
           </h2>
           
           <div className="flex flex-col items-center gap-12">
             <motion.a
               href="mailto:contact@rohitsingh.com"
-              className="saas-card px-12 py-8 text-2xl md:text-4xl font-light text-[#94a3b8] hover:text-white transition-all duration-300 border-white/5 hover:border-primary/40"
+              className="saas-card px-6 py-6 md:px-12 md:py-8 text-sm sm:text-lg md:text-4xl font-light text-[#94a3b8] hover:text-white transition-all duration-300 border-white/5 hover:border-primary/40 break-all md:break-normal max-w-full"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

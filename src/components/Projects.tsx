@@ -72,7 +72,7 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="saas-card group relative p-8 md:p-10 flex flex-col justify-between min-h-[400px]"
+              className="saas-card group relative p-6 md:p-10 flex flex-col justify-between min-h-[400px]"
               whileHover={{ y: -10 }}
             >
               {/* Individual Glow */}
@@ -88,10 +88,10 @@ export default function Projects() {
                   <span className="text-xs font-mono text-[#555555]">{project.year}</span>
                 </div>
 
-                <h3 className="text-3xl font-bold text-white mb-6 group-hover:text-primary transition-colors">
+                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-6 group-hover:text-primary transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-lg text-[#94a3b8] font-light leading-relaxed mb-10 max-w-sm">
+                <p className="text-base sm:text-lg text-[#94a3b8] font-light leading-relaxed mb-10 max-w-sm">
                   {project.description}
                 </p>
               </div>
