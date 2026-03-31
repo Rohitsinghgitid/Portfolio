@@ -41,7 +41,7 @@ const achievements = [
 
 const certifications = [
   { name: "Gen AI Study Jam", provider: "Google", file: "/gen ai study jam.pdf" },
-  { name: "Ethical Hacking", provider: "NPTEL", file: "/Ethical_Hacker certificate.pdf" },
+  { name: "Ethical Hacking", provider: "NPTEL", file: "/Ethical Hacking.pdf" },
   { name: "Oracle Ai foundation associate", provider: "Oracle", file: "/oracle ai foundation associate.pdf" },
   { name: "IoT & Digital Transformation", provider: "NASSCOM", file: "/introduction to iot and digital transformation-NASSCOM.pdf" },
   { name: "Certified Frontend Web Developer", provider: "Infosys Springboard", file: "/frontend web dev infosis.pdf" },
@@ -58,17 +58,17 @@ export default function ResumeSection() {
         <div className="lg:col-span-8 space-y-20">
           <div className="mb-8">
             <div className="flex items-center gap-4 mb-16">
-               <AnimatedHeading as="h3" className="text-xl font-bold text-primary uppercase tracking-[0.4em] flex flex-wrap">Experience</AnimatedHeading>
-               <motion.div 
-                 className="flex-1 h-px bg-white/5 origin-left"
-                 initial={{ scaleX: 0 }}
-                 whileInView={{ scaleX: 1 }}
-                 viewport={{ once: true }}
-                 transition={{ duration: 1 }}
-               />
+              <AnimatedHeading as="h3" className="text-xl font-bold text-primary uppercase tracking-[0.4em] flex flex-wrap">Experience</AnimatedHeading>
+              <motion.div
+                className="flex-1 h-px bg-white/5 origin-left"
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1 }}
+              />
             </div>
 
-            <motion.div 
+            <motion.div
               className="space-y-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -78,12 +78,12 @@ export default function ResumeSection() {
               {experience.map((exp, i) => (
                 <div key={i} className="saas-card p-6 md:p-10 group relative overflow-hidden border-l-4 border-l-primary">
                   <div className="relative md:absolute md:top-0 md:right-0 md:p-8 mb-4 md:mb-0 text-xs font-mono text-[#444444] tracking-widest">{exp.period}</div>
-                  
+
                   <div className="flex flex-col gap-2 mb-6">
                     <h4 className="text-2xl font-black text-white group-hover:text-primary transition-colors">{exp.title}</h4>
                     <p className="text-sm font-bold text-primary uppercase tracking-widest">{exp.company} • {exp.type}</p>
                   </div>
-                  
+
                   <p className="text-[#94a3b8] text-lg leading-relaxed font-light max-w-2xl">{exp.desc}</p>
                 </div>
               ))}
@@ -92,17 +92,17 @@ export default function ResumeSection() {
 
           <div id="education">
             <div className="flex items-center gap-4 mb-16">
-               <AnimatedHeading as="h3" className="text-xl font-bold text-primary uppercase tracking-[0.4em] flex flex-wrap">Education</AnimatedHeading>
-               <motion.div 
-                 className="flex-1 h-px bg-white/5 origin-left"
-                 initial={{ scaleX: 0 }}
-                 whileInView={{ scaleX: 1 }}
-                 viewport={{ once: true }}
-                 transition={{ duration: 1 }}
-               />
+              <AnimatedHeading as="h3" className="text-xl font-bold text-primary uppercase tracking-[0.4em] flex flex-wrap">Education</AnimatedHeading>
+              <motion.div
+                className="flex-1 h-px bg-white/5 origin-left"
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1 }}
+              />
             </div>
 
-            <motion.div 
+            <motion.div
               className="space-y-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -111,7 +111,7 @@ export default function ResumeSection() {
             >
               {education.map((edu, i) => (
                 <div key={i} className="saas-card p-6 md:p-10 group border-l-4 border-l-primary/60 hover:border-l-primary transition-all">
-                   <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+                  <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
                     <h4 className="text-2xl font-black text-white group-hover:text-primary transition-colors leading-tight">{edu.school}</h4>
                     <span className="text-xs font-mono text-[#555555] uppercase tracking-widest bg-white/5 px-4 py-2 rounded-lg">{edu.period}</span>
                   </div>
@@ -125,7 +125,7 @@ export default function ResumeSection() {
 
         {/* Certifications Sidebar */}
         <div className="lg:col-span-4 mt-8 lg:mt-0">
-          <motion.div 
+          <motion.div
             className="sticky top-32"
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -133,7 +133,7 @@ export default function ResumeSection() {
             transition={{ duration: 1 }}
           >
             <div className="flex items-center gap-4 mb-12">
-               <h3 className="text-xl font-bold text-white uppercase tracking-[0.3em]">Highlights</h3>
+              <h3 className="text-xl font-bold text-white uppercase tracking-[0.3em]">Highlights</h3>
             </div>
 
             <ul className="space-y-6 mb-20">
@@ -150,7 +150,7 @@ export default function ResumeSection() {
             </ul>
 
             <div className="flex items-center gap-4 mb-12">
-               <h3 className="text-xl font-bold text-white uppercase tracking-[0.3em]">Credentials</h3>
+              <h3 className="text-xl font-bold text-white uppercase tracking-[0.3em]">Credentials</h3>
             </div>
 
             <ul className="space-y-6">
@@ -162,27 +162,27 @@ export default function ResumeSection() {
                   <span className="text-[10px] text-[#555555] font-black uppercase tracking-widest">
                     {cert.provider}
                   </span>
-                  
+
                   {cert.file && (
                     <div className="w-full grid grid-rows-[1fr] md:grid-rows-[0fr] md:group-hover:grid-rows-[1fr] transition-[grid-template-rows,opacity] duration-300 ease-out opacity-100 md:opacity-0 md:group-hover:opacity-100">
                       <div className="overflow-hidden">
                         <div className="flex items-center gap-2 mt-4 pb-1">
-                           <a
-                              href={cert.file}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="flex-1 flex items-center justify-center gap-2 py-2 text-xs font-bold text-[#94a3b8] bg-white/5 border border-white/5 hover:text-white hover:bg-primary/20 hover:border-primary/50 rounded-xl transition-all duration-300"
-                            >
-                               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
-                               View
-                            </a>
-                            <a
-                              href={cert.file}
-                              download
-                              className="flex items-center justify-center p-2 text-white bg-primary text-black hover:bg-white rounded-xl transition-all duration-300 hover:scale-105 active:scale-95"
-                            >
-                              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                            </a>
+                          <a
+                            href={cert.file}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex-1 flex items-center justify-center gap-2 py-2 text-xs font-bold text-[#94a3b8] bg-white/5 border border-white/5 hover:text-white hover:bg-primary/20 hover:border-primary/50 rounded-xl transition-all duration-300"
+                          >
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                            View
+                          </a>
+                          <a
+                            href={cert.file}
+                            download
+                            className="flex items-center justify-center p-2 text-white bg-primary text-black hover:bg-white rounded-xl transition-all duration-300 hover:scale-105 active:scale-95"
+                          >
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                          </a>
                         </div>
                       </div>
                     </div>
