@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useState } from "react";
+import { socials } from "@/components/SocialBar";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -157,6 +158,26 @@ export default function Navbar() {
             </motion.a>
           ))}
         </div>
+
+        {/* Mobile Socials */}
+        <motion.div 
+           className="absolute bottom-12 flex gap-8 items-center"
+           initial={{ opacity: 0, y: 20 }}
+           animate={menuOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+           transition={{ delay: 0.4 }}
+        >
+          {socials.map((social) => (
+             <a 
+                key={social.label} 
+                href={social.href} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-[#888888] hover:text-[#7c6af7] transition-colors"
+             >
+                {social.icon}   
+             </a>
+          ))}
+        </motion.div>
       </motion.div>
     </>
   );

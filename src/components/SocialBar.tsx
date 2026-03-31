@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-const socials = [
+export const socials = [
   {
     label: "GitHub",
     href: "https://github.com/Rohitsinghgitid",
