@@ -22,6 +22,8 @@ export const metadata: Metadata = {
 
 import ThemeSwitcher from "@/components/ThemeSwitcher";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import SmoothScroll from "@/components/SmoothScroll";
+import GlowBlob from "@/components/GlowBlob";
 
 export default function RootLayout({
   children,
@@ -32,8 +34,11 @@ export default function RootLayout({
     <html lang="en" className={sans.variable}>
       <body className={`${sans.className} antialiased`}>
         <ThemeProvider>
-          {children}
-          <ThemeSwitcher />
+          <SmoothScroll>
+            <GlowBlob />
+            {children}
+            <ThemeSwitcher />
+          </SmoothScroll>
         </ThemeProvider>
       </body>
     </html>

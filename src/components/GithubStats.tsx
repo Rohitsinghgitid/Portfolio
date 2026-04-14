@@ -45,11 +45,11 @@ export default function GithubStats() {
           fetch("https://api.github.com/users/Rohitsinghgitid/repos?per_page=100"),
         ]);
 
-        const userData = await userRes.json();
-        const reposData = await reposRes.json();
+        const userData = userRes.ok ? await userRes.json() : null;
+        const reposData = reposRes.ok ? await reposRes.json() : null;
 
-        if (!Array.isArray(reposData)) {
-           throw new Error("Invalid repos data");
+        if (!userData || !Array.isArray(reposData)) {
+            throw new Error("Invalid GitHub data received");
         }
 
         // Calculate stars

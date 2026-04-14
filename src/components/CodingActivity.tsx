@@ -75,9 +75,9 @@ export default function CodingActivity() {
           fetch("https://codeforces.com/api/user.status?handle=rohit08022005").catch(() => null),
         ]);
 
-        const lcData = lcRes ? await lcRes.json() : null;
-        const lcStatsData = lcStatsRes ? await lcStatsRes.json() : null;
-        const cfData = cfRes ? await cfRes.json() : null;
+        const lcData = lcRes && lcRes.ok ? await lcRes.json() : null;
+        const lcStatsData = lcStatsRes && lcStatsRes.ok ? await lcStatsRes.json() : null;
+        const cfData = cfRes && cfRes.ok ? await cfRes.json() : null;
 
         // Initialize 365 days empty arrays with UTC keys
         const lcMap: Record<string, number> = {};
@@ -98,14 +98,24 @@ export default function CodingActivity() {
 
         // Parse Leetcode Calendar (UNIX Timestamp -> Count)
         if (lcData && lcData.submissionCalendar) {
-          const lcRaw = JSON.parse(lcData.submissionCalendar);
-          Object.keys(lcRaw).forEach((timestamp) => {
-            const dateStr = new Date(parseInt(timestamp) * 1000).toISOString().split('T')[0];
-            if (lcMap[dateStr] !== undefined) {
-              lcMap[dateStr] += lcRaw[timestamp];
-              lcTotalSubmissions += lcRaw[timestamp];
-            }
-          });
+          try {
+            const lcRaw = typeof lcData.submissionCalendar === 'string' 
+              ? JSON.parse(lcData.submissionCalendar) 
+              : lcData.submissionCalendar;
+            
+            Object.keys(lcRaw).forEach((timestamp) => {
+              const date = new Date(parseInt(timestamp) * 1000);
+              if (!isNaN(date.getTime())) {
+                const dateStr = date.toISOString().split('T')[0];
+                if (lcMap[dateStr] !== undefined) {
+                  lcMap[dateStr] += lcRaw[timestamp];
+                  lcTotalSubmissions += lcRaw[timestamp];
+                }
+              }
+            });
+          } catch (e) {
+            console.error("Error parsing LC sub calendar:", e);
+          }
         }
 
         // Parse Codeforces Submissions (ONLY OK VERDICTS)
@@ -115,10 +125,13 @@ export default function CodingActivity() {
               const problemId = `${sub.problem.contestId}-${sub.problem.index}`;
               cfUniqueSolved.add(problemId);
               
-              const dateStr = new Date(sub.creationTimeSeconds * 1000).toISOString().split('T')[0];
-              if (cfMap[dateStr] !== undefined) {
-                cfMap[dateStr] += 1;
-                cfTotalSubmissions += 1;
+              const date = new Date(sub.creationTimeSeconds * 1000);
+              if (!isNaN(date.getTime())) {
+                const dateStr = date.toISOString().split('T')[0];
+                if (cfMap[dateStr] !== undefined) {
+                  cfMap[dateStr] += 1;
+                  cfTotalSubmissions += 1;
+                }
               }
             }
           });
