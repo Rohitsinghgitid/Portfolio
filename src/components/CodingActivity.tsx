@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import AnimatedHeading from "./AnimatedHeading";
 import dynamic from 'next/dynamic';
-import { format, subDays, formatDistanceToNow } from "date-fns";
+import { formatDistanceToNow } from "date-fns";
 
 const ActivityCalendar = dynamic(
   () => import("react-activity-calendar").then((mod) => mod.ActivityCalendar),
