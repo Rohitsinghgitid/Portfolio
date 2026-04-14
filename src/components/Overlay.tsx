@@ -40,7 +40,7 @@ const sections = [
            className="flex justify-center gap-4"
         >
           <a 
-            href="/resume.pdf" 
+            href="/Rohit_Singh_Resume.pdf" 
             target="_blank" 
             rel="noopener noreferrer"
             className="px-6 py-2.5 rounded-full bg-white text-black text-xs font-bold uppercase tracking-widest hover:bg-primary hover:text-white transition-all duration-300 pointer-events-auto"

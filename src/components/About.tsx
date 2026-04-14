@@ -112,7 +112,7 @@ export default function About() {
                 {/* Hover State - Dual Options */}
                 <div className="absolute inset-0 flex md:translate-y-full translate-y-0 md:group-hover:translate-y-0 transition-transform duration-500 ease-in-out">
                    <a 
-                      href="/resume.pdf" 
+                      href="/Rohit_Singh_Resume.pdf" 
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex-1 bg-black text-primary hover:bg-primary hover:text-white flex items-center justify-center gap-2 text-xs font-black uppercase tracking-widest border-r border-white/10 transition-all duration-300"
@@ -121,7 +121,7 @@ export default function About() {
                       View
                    </a>
                    <a 
-                      href="/resume.pdf" 
+                      href="/Rohit_Singh_Resume.pdf" 
                       download="Rohit_Singh_Baghel_Resume.pdf"
                       className="flex-1 bg-primary text-black hover:bg-white flex items-center justify-center gap-2 text-xs font-black uppercase tracking-widest transition-all duration-300"
                    >
