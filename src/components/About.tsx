@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import AnimatedHeading from "./AnimatedHeading";
+import TechOrb from "./TechOrb";
 
 const skills = [
   "C++", "Python", "Java", "HTML5", "CSS3", "JavaScript",
@@ -64,18 +65,9 @@ export default function About() {
               B.Tech student proficient in C++, Python and Java with hands-on web development using HTML, CSS, JavaScript and Express.js to build secure, responsive applications and RESTful APIs. Seeking software development or cybersecurity internships to apply practical security experience.
             </p>
 
-            <div>
-              <h4 className="text-xs uppercase tracking-widest text-[#555555] font-bold mb-6">Technical Stack</h4>
-              <div className="flex flex-wrap gap-2">
-                {skills.map((skill) => (
-                  <span 
-                    key={skill}
-                    className="px-4 py-2 rounded-xl bg-white/5 border border-white/5 text-xs text-[#888888] hover:border-primary/30 hover:text-white transition-all cursor-default"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
+            <div className="mt-8">
+              <h4 className="text-xs uppercase tracking-widest text-[#555555] font-bold mb-4">Technical Stack</h4>
+              <TechOrb />
             </div>
           </motion.div>
 

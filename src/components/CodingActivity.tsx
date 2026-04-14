@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import AnimatedHeading from "./AnimatedHeading";
 import dynamic from 'next/dynamic';
 import { formatDistanceToNow } from "date-fns";
+import GithubStats from "./GithubStats";
 
 const ActivityCalendar = dynamic(
   () => import("react-activity-calendar").then((mod) => mod.ActivityCalendar),
@@ -297,6 +298,8 @@ export default function CodingActivity() {
                </div>
             </div>
           </motion.div>
+
+          <GithubStats />
         </div>
       </div>
     </section>
