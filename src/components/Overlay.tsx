@@ -30,9 +30,24 @@ const sections = [
             Rohit Singh.
           </span>
         </h1>
-        <p className="text-[#888888] text-base md:text-xl font-light tracking-wide max-w-sm mx-auto">
+        <p className="text-[#888888] text-base md:text-xl font-light tracking-wide max-w-sm mx-auto mb-8">
           B.Tech student at LNCTS Bhopal specializing in secure, responsive applications and AI.
         </p>
+        <motion.div
+           initial={{ opacity: 0, y: 10 }}
+           animate={{ opacity: 1, y: 0 }}
+           transition={{ delay: 1, duration: 0.8 }}
+           className="flex justify-center gap-4"
+        >
+          <a 
+            href="/resume.pdf" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="px-6 py-2.5 rounded-full bg-white text-black text-xs font-bold uppercase tracking-widest hover:bg-primary hover:text-white transition-all duration-300 pointer-events-auto"
+          >
+            View Resume
+          </a>
+        </motion.div>
       </div>
     ),
     position: "items-center justify-center",
@@ -121,7 +136,7 @@ function OverlaySection({
       className={`absolute inset-0 flex ${section.position} pointer-events-none`}
       style={{ opacity, y }}
     >
-      <div className="px-6">{section.content}</div>
+      <div className="px-6 pointer-events-auto">{section.content}</div>
     </motion.div>
   );
 }

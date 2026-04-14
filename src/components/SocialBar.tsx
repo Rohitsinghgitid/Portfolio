@@ -25,6 +25,24 @@ export const socials = [
     ),
   },
   {
+    label: "LeetCode",
+    href: "https://leetcode.com/u/rohitsinghbaghel0802/",
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M13.483 0a1.374 1.374 0 0 0-.961.414l-9.88 9.88a1.374 1.374 0 0 0 0 1.94l9.88 9.88a1.374 1.374 0 0 0 1.94 0l9.88-9.88a1.374 1.374 0 0 0 0-1.94L14.444.414A1.374 1.374 0 0 0 13.483 0zm0 2.214a.8.8 0 0 1 .56.242l8.36 8.36a.8.8 0 0 1 0 1.134l-8.36 8.36a.8.8 0 0 1-1.12 0l-8.36-8.36a.8.8 0 0 1 0-1.134l8.36-8.36a.8.8 0 0 1 .56-.242zM12.5 12a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+      </svg>
+    ),
+  },
+  {
+    label: "HackerRank",
+    href: "https://www.hackerrank.com/profile/rohitsinghbagh_1",
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+      </svg>
+    ),
+  },
+  {
     label: "Codolio",
     href: "https://codolio.com/profile/rohitsinghbaghel0802",
     icon: (

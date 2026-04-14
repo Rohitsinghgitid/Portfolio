@@ -7,7 +7,7 @@ import { socials } from "@/components/SocialBar";
 const navLinks = [
   { label: "About", href: "#about" },
   { label: "Experience", href: "#resume" },
-  { label: "Education", href: "#education" },
+  { label: "Activity", href: "#activity" },
   { label: "Projects", href: "#work" },
   { label: "Contact", href: "#contact" },
 ];
