@@ -4,12 +4,6 @@ import { motion } from "framer-motion";
 import AnimatedHeading from "./AnimatedHeading";
 import TechOrb from "./TechOrb";
 
-const skills = [
-  "C++", "Python", "Java", "HTML5", "CSS3", "JavaScript",
-  "Express.js", "MySQL", "Git", "GitHub", "Kali Linux",
-  "Metasploit", "Penetration Testing", "Problem-Solving", "Cloud Computing",
-];
-
 const achievements = [
   {
     title: "Research Publication",

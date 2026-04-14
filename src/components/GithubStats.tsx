@@ -3,6 +3,12 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
+interface GithubRepo {
+  stargazers_count: number;
+  language: string | null;
+  name: string;
+}
+
 interface GithubStatsData {
   stars: number;
   repos: number;
@@ -47,11 +53,11 @@ export default function GithubStats() {
         }
 
         // Calculate stars
-        const stars = reposData.reduce((acc: number, repo: any) => acc + repo.stargazers_count, 0);
+        const stars = reposData.reduce((acc: number, repo: GithubRepo) => acc + repo.stargazers_count, 0);
 
         // Calculate languages
         const langMap: Record<string, number> = {};
-        reposData.forEach((repo: any) => {
+        reposData.forEach((repo: GithubRepo) => {
           if (repo.language) {
             langMap[repo.language] = (langMap[repo.language] || 0) + 1;
           }
