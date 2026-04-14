@@ -13,6 +13,7 @@ const skills = [
 export default function TechOrb() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [items, setItems] = useState<{ name: string; x: number; y: number; z: number }[]>([]);
+  const [radius, setRadius] = useState(200);
   
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
@@ -21,19 +22,28 @@ export default function TechOrb() {
   const springY = useSpring(mouseY, { stiffness: 60, damping: 20 });
 
   useEffect(() => {
-    const radius = 200;
-    const newItems = skills.map((skill, i) => {
-      const phi = Math.acos(-1 + (2 * i) / skills.length);
-      const theta = Math.sqrt(skills.length * Math.PI) * phi;
-      
-      return {
-        name: skill,
-        x: radius * Math.sin(phi) * Math.cos(theta),
-        y: radius * Math.sin(phi) * Math.sin(theta),
-        z: radius * Math.cos(phi),
-      };
-    });
-    setItems(newItems);
+    const handleResize = () => {
+      const isMobile = window.innerWidth < 768;
+      const newRadius = isMobile ? 120 : 200;
+      setRadius(newRadius);
+
+      const newItems = skills.map((skill, i) => {
+        const phi = Math.acos(-1 + (2 * i) / skills.length);
+        const theta = Math.sqrt(skills.length * Math.PI) * phi;
+        
+        return {
+          name: skill,
+          x: newRadius * Math.sin(phi) * Math.cos(theta),
+          y: newRadius * Math.sin(phi) * Math.sin(theta),
+          z: newRadius * Math.cos(phi),
+        };
+      });
+      setItems(newItems);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const handleMouseMove = (e: React.MouseEvent) => {
@@ -56,7 +66,7 @@ export default function TechOrb() {
       ref={containerRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="relative w-full h-[400px] flex items-center justify-center cursor-default perspective-[1000px] select-none"
+      className="relative w-full h-[280px] md:h-[400px] flex items-center justify-center cursor-default perspective-[1000px] select-none"
     >
       <motion.div 
         style={{ 
@@ -66,7 +76,7 @@ export default function TechOrb() {
         className="relative w-full h-full preserve-3d"
       >
         {items.map((item, i) => (
-          <SkillItem key={i} item={item} />
+          <SkillItem key={i} item={item} radius={radius} />
         ))}
       </motion.div>
       
@@ -76,11 +86,9 @@ export default function TechOrb() {
   );
 }
 
-function SkillItem({ item }: { item: { name: string; x: number; y: number; z: number } }) {
-  // Use transform to place items in 3D space
-  // We'll also adjust opacity based on Z depth
-  const opacity = (item.z + 250) / 500;
-  const scale = 0.5 + (item.z + 250) / 600;
+function SkillItem({ item, radius }: { item: { name: string; x: number; y: number; z: number }; radius: number }) {
+  const opacity = (item.z + radius * 1.25) / (radius * 2.5);
+  const scale = 0.5 + (item.z + radius * 1.25) / (radius * 3);
 
   return (
     <motion.div
@@ -91,10 +99,10 @@ function SkillItem({ item }: { item: { name: string; x: number; y: number; z: nu
         x: item.x,
         y: item.y,
         z: item.z,
-        opacity: Math.max(0.2, opacity),
-        scale: Math.max(0.5, scale),
+        opacity: Math.max(0.15, opacity),
+        scale: Math.max(0.4, scale),
       }}
-      className="whitespace-nowrap px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-[10px] font-bold text-[#888] hover:text-white hover:border-primary/50 hover:bg-primary/20 transition-colors pointer-events-auto"
+      className="whitespace-nowrap px-2 py-1 md:px-3 md:py-1.5 rounded-lg bg-white/5 border border-white/10 text-[9px] md:text-[10px] font-bold text-[#888] hover:text-white hover:border-primary/50 hover:bg-primary/20 transition-colors pointer-events-auto"
       whileHover={{ scale: scale * 1.2, color: "#fff", z: item.z + 50 }}
     >
       {item.name}
